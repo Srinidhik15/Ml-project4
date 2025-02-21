@@ -1,0 +1,31 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://drive.google.com/file/d/1qvDyFicc8e5XL6_K3ojnJrXr6PfuN_VH/view?usp=sharing
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+
+data_preprocessing:
+  root_dir: artifacts/data_preprocessing
+  dataset_path: artifacts/data_ingestion/Dataset.csv
+  preprocessor_path: artifacts/data_preprocessing/preprocessor.h5
+  tracked_preprocessor_path: preprocessor/preprocessor.pkl
+
+
+
+training:
+  root_dir: artifacts/training
+  training_data: artifacts/processed_data.csv
+  trained_model_file_path: artifacts/training/model.h5
+  trained_model_file_path_rent: artifacts/training/model_rent.h5
+  mlflow_uri: https://dagshub.com/Rajarshi12321/My-Sweet-Home.mlflow
+
+recommed_data_preprocessing:
+    root_dir: artifacts/recommed
+    dataset_path: artifacts/data_ingestion/Dataset.csv
+    processed_dataset_path: artifacts/data_preprocessed_recommend.csv
+    recommend_dataset_path: artifacts/recommend_data.csv
+    tracked_recommend_dataset_path: recommend/recommend_data.csv
